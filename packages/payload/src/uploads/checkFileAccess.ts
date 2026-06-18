@@ -15,6 +15,7 @@ export const checkFileAccess = async ({
   prefix?: string
   req: PayloadRequest
 }): Promise<TypeWithID | undefined> => {
+  console.log('checkFileAccess')
   if (filename.includes('../') || filename.includes('..\\')) {
     throw new Forbidden(req.t)
   }

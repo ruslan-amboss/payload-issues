@@ -181,6 +181,7 @@ export const generateFileData = async <T>({
 
   try {
     const fileSupportsResize = canResizeImage(file.mimetype)
+    console.log(`File supports resize: ${fileSupportsResize}`)
     let fsSafeName: string
     let sharpFile: Sharp | undefined
     let dimensions: ProbedImageSize | undefined
